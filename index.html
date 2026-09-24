@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameForge</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      padding: 25px;
+      background: #1b1b1b;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    .creator {
+      margin: 30px auto;
+      max-width: 500px;
+      padding: 25px;
+      background: #1d1d1d;
+      border-radius: 20px;
+    }
+
+    .avatar {
+      width: 180px;
+      height: 240px;
+      margin: 20px auto;
+      background: #555;
+      border-radius: 15px;
+      position: relative;
+    }
+
+    .head {
+      width: 90px;
+      height: 90px;
+      background: #e0a070;
+      position: absolute;
+      top: 15px;
+      left: 45px;
+      border-radius: 12px;
+    }
+
+    .body {
+      width: 110px;
+      height: 110px;
+      background: #3498db;
+      position: absolute;
+      top: 110px;
+      left: 35px;
+      border-radius: 10px;
+    }
+
+    button {
+      padding: 12px 20px;
+      margin: 6px;
+      border: none;
+      border-radius: 10px;
+      background: #5865f2;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #4752c4;
+    }
+
+    #save {
+      background: #20c997;
+      width: 90%;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>🎮 GameForge</h1>
+  <p>O‘z skin-ingni yarat!</p>
+</header>
+
+<div class="creator">
+
+  <h2>Skin Creator</h2>
+
+  <div class="avatar">
+    <div class="head"></div>
+    <div class="body"></div>
+  </div>
+
+  <h3>Detal tanla</h3>
+
+  <button onclick="changeBody('#3498db')">🔵 Ko‘k</button>
+  <button onclick="changeBody('#e74c3c')">🔴 Qizil</button>
+  <button onclick="changeBody('#2ecc71')">🟢 Yashil</button>
+  <button onclick="changeBody('#9b59b6')">🟣 Binafsha</button>
+
+  <br>
+
+  <button id="save" onclick="saveSkin()">💾 SIK SAVEEN</button>
+
+</div>
+
+<script>
+  function changeBody(color) {
+    document.querySelector('.body').style.background = color;
+  }
+
+  function saveSkin() {
+    alert("Skin saqlandi! 🔥");
+  }
+</script>
+
+</body>
+      </html>
